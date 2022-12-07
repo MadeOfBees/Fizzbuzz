@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Fizzbuzz/static/css/main.43ad412b.css",
-    "main.js": "/Fizzbuzz/static/js/main.969809be.js",
+    "main.js": "/Fizzbuzz/static/js/main.2e74b43e.js",
     "index.html": "/Fizzbuzz/index.html",
     "main.43ad412b.css.map": "/Fizzbuzz/static/css/main.43ad412b.css.map",
-    "main.969809be.js.map": "/Fizzbuzz/static/js/main.969809be.js.map"
+    "main.2e74b43e.js.map": "/Fizzbuzz/static/js/main.2e74b43e.js.map"
   },
   "entrypoints": [
     "static/css/main.43ad412b.css",
-    "static/js/main.969809be.js"
+    "static/js/main.2e74b43e.js"
   ]
 }
