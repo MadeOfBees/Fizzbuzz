@@ -36,7 +36,7 @@ function MainApp() {
     const [output, setOutput] = React.useState();
 
     function generateCount() {
-        var input = document.getElementById("UserInput").value;
+        var input = document.getElementById("UserInput").value.trim();
         if (!input > 0 || input % 1 !== 0){return}else{
         let outputArray = [];
         for (let i = 1; i <= input; i++) {
