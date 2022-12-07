@@ -35,7 +35,7 @@ function App() {
               element={<Home />}
             />
             <Route
-              path="/Fizzbuzz"
+              path="/Fizzbuzz/"
               element={<Home />}
             />
             <Route
