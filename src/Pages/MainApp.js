@@ -37,6 +37,7 @@ function MainApp() {
 
     function generateCount() {
         var input = document.getElementById("UserInput").value;
+        if (!input > 0 || input % 1 !== 0){return}else{
         let outputArray = [];
         for (let i = 1; i <= input; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
@@ -53,7 +54,7 @@ function MainApp() {
         const finalArray = `[${wQuotes}]`;
         setOutput(finalArray);
         setOpen(true);
-    }
+    }}
     return (
         <div>
             <h1>Fizzbuzz up to:</h1>
