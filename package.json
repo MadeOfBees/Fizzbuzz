@@ -1,6 +1,6 @@
 {
-  "name": "material-io",
-  "homepage": "https://MadeOfBees.github.io/material-io",
+  "name": "react-fizzbuzz",
+  "homepage": "https://MadeOfBees.github.io/react-fizzbuzz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

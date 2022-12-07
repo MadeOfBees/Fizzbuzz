@@ -34,20 +34,34 @@ function MainApp() {
     const [open, setOpen] = React.useState(false);
     const handleClose = () => setOpen(false);
     const [output, setOutput] = React.useState();
-    const [input, setInput] = React.useState();
 
-    function logic() {
-
+    function generateCount() {
+        var input = document.getElementById("UserInput").value;
+        let outputArray = [];
+        for (let i = 1; i <= input; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                outputArray.push("FizzBuzz");
+            } else if (i % 3 === 0) {
+                outputArray.push("Fizz");
+            } else if (i % 5 === 0) {
+                outputArray.push("Buzz");
+            } else {
+                outputArray.push(`${i}`)
+            }
+        }
+        const wQuotes = outputArray.map(input => `"${input}"`);
+        const finalArray = `[${wQuotes}]`;
+        setOutput(finalArray);
+        setOpen(true);
     }
-
     return (
         <div>
-            <h1>INPUT HERE:</h1>
+            <h1>Fizzbuzz up to:</h1>
             <Box sx={{ width: '100%' }}>
                 <Stack spacing={2} className="NoDoubtPut">
                     <Item className="screenText">
-                        <Input></Input>
-                        <Item><Button onClick={logic}>MAIN BUTTON</Button></Item>
+                        <Input id='UserInput'></Input>
+                        <Item><Button onClick={generateCount}>MAIN BUTTON</Button></Item>
                     </Item>
                 </Stack>
             </Box>
@@ -61,18 +75,16 @@ function MainApp() {
                 BackdropProps={{
                     timeout: 500,
                 }}
+                className='Modal'
             >
                 <Fade in={open}>
                     <Box sx={style}>
-                        <Typography id="transition-modal-title" variant="h6" component="h2">
-                            We have chosen:
-                        </Typography>
                         <Typography id="modal-modal-description" className='NoCont'>
                             {output}
                         </Typography>
                     </Box>
                 </Fade>
-            </Modal>
+            </Modal >
         </div>
     );
 }
