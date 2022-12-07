@@ -61,7 +61,7 @@ function MainApp() {
                 <Stack spacing={2} className="NoDoubtPut">
                     <Item className="screenText">
                         <Input id='UserInput'></Input>
-                        <Item><Button onClick={generateCount}>MAIN BUTTON</Button></Item>
+                        <Item><Button onClick={generateCount}>Generate some buzz</Button></Item>
                     </Item>
                 </Stack>
             </Box>
