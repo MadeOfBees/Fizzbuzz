@@ -37,7 +37,7 @@ function MainApp() {
 
     function generateCount() {
         var input = document.getElementById("UserInput").value.trim();
-        if (!input > 0 || input % 1 !== 0){return}else{
+        if (!input > 0 || input % 1 !== 0 || input === " "){return}else{
         let outputArray = [];
         for (let i = 1; i <= input; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
