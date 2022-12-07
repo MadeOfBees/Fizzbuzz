@@ -27,11 +27,15 @@ function App() {
         <div className="Central">
           <Routes className="Central">
             <Route
+              path="/"
+              element={<Home />}
+            />
+            <Route
               path="/Home"
               element={<Home />}
             />
             <Route
-              path="/"
+              path="/Fizzbuzz"
               element={<Home />}
             />
             <Route

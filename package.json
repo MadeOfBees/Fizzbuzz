@@ -1,6 +1,6 @@
 {
-  "name": "react-fizzbuzz",
-  "homepage": "https://MadeOfBees.github.io/react-fizzbuzz",
+  "name": "Fizzbuzz",
+  "homepage": "https://MadeOfBees.github.io/Fizzbuzz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
