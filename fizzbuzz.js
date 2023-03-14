@@ -22,14 +22,14 @@ const spellNumber = (num) => {
 for (let i = 1; i <= maxNumber; i++) {
     if (isDivBy3(i)) {
         if (isDivBy5(i)) {
-            fizzArray.push("fizzbuzz");
+            fizzArray.push("Fizzbuzz");
         }
         else {
-            fizzArray.push("fizz");
+            fizzArray.push("Fizz");
         }
     }
     else if (isDivBy5(i)) {
-        fizzArray.push("buzz");
+        fizzArray.push("Buzz");
     }
     else {
         fizzArray.push(spellNumber(i));
@@ -37,7 +37,7 @@ for (let i = 1; i <= maxNumber; i++) {
     if (i === maxNumber) {
         fs.writeFile('fizzbuzz.txt', fizzArray.join(',\n'), function (err) {
             if (err) throw err;
-            console.log('The file has been saved!');
+            console.log(`File with ${maxNumber} values created!`);
             return
         });
     }
