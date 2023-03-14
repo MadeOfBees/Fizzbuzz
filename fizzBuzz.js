@@ -26,7 +26,7 @@ for (let i = 1; i <= maxNumber; i++) {
     if (i === maxNumber) {
         fs.writeFile('fizzBuzz.txt', fizzArray.join(',\n'), function (err) {
             if (err) throw err;
-            console.log(`File with ${maxNumber} values created!`);
+            console.log(`File with ${maxNumber} values created!, the final value is ${fizzArray[fizzArray.length - 1]}`);
             return
         });
     }
