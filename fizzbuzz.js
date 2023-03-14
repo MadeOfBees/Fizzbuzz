@@ -10,11 +10,10 @@ const spellNumber = (num) => {
     const teens = ["", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
     const tens = ['', "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
     const bigNums = ['', "Hundred", 'Thousand', 'Million', 'Billion'];
-    if (num > 1000000000000) {
+    const splitVals = [1000000, 1000000000, 1000000000000];
+    const divBy = [1000, 1000000, 1000000000];
+    if (num > 9999999999999) {
         return "Number too large";
-    }
-    if (num < 1) {
-        return "Number too small";
     }
     if (num < 10) {
         return ones[num];
@@ -26,19 +25,12 @@ const spellNumber = (num) => {
         return tens[Math.floor(num / 10)] + " " + ones[num % 10];
     }
     if (num < 1000) {
-        return ones[Math.floor(num / 100)] +  " " + bigNums[1]  + " " +  spellNumber(num % 100);
+        return ones[Math.floor(num / 100)] + " " + bigNums[1] + " " + spellNumber(num % 100);
     }
-    if (num < 1000000) {
-        return spellNumber(Math.floor(num / 1000)) + " " +bigNums[2] + " " + spellNumber(num % 1000);
-    }
-    if (num < 1000000000) {
-        return spellNumber(Math.floor(num / 1000000)) + " " + bigNums[3] + " " + spellNumber(num % 1000000);
-    }
-    if (num < 1000000000000) {
-        return spellNumber(Math.floor(num / 1000000000)) + " " + bigNums[4] + " " + spellNumber(num % 1000000000);
-    }
-    else {
-        return "Error";
+    for (let i = 0; i < splitVals.length; i++) {
+        if (num < splitVals[i]) {
+            return spellNumber(Math.floor(num / 1000)) + " " + bigNums[i + 2] + " " + spellNumber(num % divBy[i]);
+        }
     }
 }
 
