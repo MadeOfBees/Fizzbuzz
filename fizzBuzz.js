@@ -4,7 +4,6 @@ if (process.argv[2]) maxNumber = Number(process.argv[2]);
 const fizzArray = [];
 const isDivBy3 = (num) => num % 3 === 0;
 const isDivBy5 = (num) => num % 5 === 0;
-
 const spellNumber = (num) => {
     const ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
     const teens = ["", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
@@ -17,7 +16,6 @@ const spellNumber = (num) => {
     for (let i = 2; i < bigNums.length; i++) if (num < 1000 ** i) return `${spellNumber(Math.floor(num / 1000 ** (i-1)))} ${bigNums[i]} ${spellNumber(num % 1000 ** (i-1))}`;
     else return ("Number out of range")
   }
-
 for (let i = 1; i <= maxNumber; i++) {
     if (isDivBy3(i)) {
         if (isDivBy5(i)) fizzArray.push("Fizzbuzz");
